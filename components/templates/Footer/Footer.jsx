@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-wrap">
           <div className="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
-            <h3 className="mb-2 text-2xl font-bold">RCTN-KS07</h3>
+            <h3 className="mb-2 text-2xl font-bold">RCTN-KM007</h3>
             <p>Mochammad Iqbal Saputra - 013</p>
             <p>Dani Rizky Zaelani - 020</p>
             <p>Dirham Triyadi - 021</p>
@@ -23,6 +23,11 @@ const Footer = () => {
               <li>
                 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer noopener" className="mb-3 inline-block text-base hover:text-primary">
                   TailwindCSS
+                </a>
+                </li>
+                <li>
+                <a href="https://daisyui.com/" target="_blank" rel="noreferrer noopener" className="mb-3 inline-block text-base hover:text-primary">
+                  DaisyUi
                 </a>
               </li>
             </ul>
