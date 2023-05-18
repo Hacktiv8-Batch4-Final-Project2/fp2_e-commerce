@@ -4,13 +4,13 @@ const CartItem = ({item, index}) => {
   console.log(item);
   return (
       <div className="gap-10 p-2" key={index}>
-        <div className="card card-compact w-90 bg-base-100 shadow-xl">
+        <div className="card card-compact w-96 bg-base-100 shadow-xl">
           <figure>
             <img
               src={item.image}
-              alt="Shoes"
-              width={300}
-              height={300}
+              alt={item.title}
+              height='200'
+              width='200'
             />
           </figure>
           <div className="card-body">
