@@ -1,3 +1,4 @@
+import {store, wrapper} from '@/components/store'
 import '@/styles/globals.css'
 import Navbar from '@/components/templates/Navbar/Navbar'
 import Footer  from '@/components/templates/Footer/Footer';
@@ -7,16 +8,16 @@ import Footer  from '@/components/templates/Footer/Footer';
 const App = ({ Component, pageProps }) => {
   return (
     <>
-    <Navbar/>
+      <Navbar/>
+      
     
-  
-    <Component {...pageProps} />
-    
-    <Footer/>
-    
+      <Component {...pageProps} />
+      
+      <Footer/>
+      
     </>
 
   )
 }
 
-export default App;
+export default wrapper.withRedux(App);
