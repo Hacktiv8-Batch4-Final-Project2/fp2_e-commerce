@@ -15,8 +15,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="md:flex flex-wrap justify-center">
-        {
+    <div className="container px-10 xl:px-20">
+      <div className="grid justify-center md:grid-cols-2 md:gap-8 xl:grid-cols-4">
+       {
           isLoading ? <h1>Loading...</h1> : (
             products.map((item, index) => {
               return (
@@ -25,7 +26,9 @@ export default function Home() {
             })
           )
         }
-      </div>
+    </div>
+    </div>
+
     </>
   );
 }
