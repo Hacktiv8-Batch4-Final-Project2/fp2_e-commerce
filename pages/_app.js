@@ -1,5 +1,22 @@
 import '@/styles/globals.css'
+import Navbar from '@/components/templates/Navbar/Navbar'
+import Footer  from '@/components/templates/Footer/footer';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <>
+    <Navbar/>
+    
+  
+    <Component {...pageProps} />
+    
+    <Footer/>
+    
+    </>
+
+  )
 }
+
+export default App;
