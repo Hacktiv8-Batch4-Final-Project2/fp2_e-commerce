@@ -1,16 +1,31 @@
-'use client'
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import CartItem from "../components/templates/CartItem/CartItem";
+import { fetchProducts } from "@/components/store/reducers/Product";
 
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { CartItem } from "../components/templates/CartItem/CartItem";
-
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const {products, isLoading} = useSelector((state) => state.products);
+  // console.log(products);
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  },[dispatch])
+
   return (
     <>
-    <CartItem />
+      <div className="md:flex flex-wrap justify-center">
+        {
+          isLoading ? <h1>Loading...</h1> : (
+            products.map((item, index) => {
+              return (
+                <CartItem key={index} item={item}/>
+              )
+            })
+          )
+        }
+      </div>
     </>
   );
 }
