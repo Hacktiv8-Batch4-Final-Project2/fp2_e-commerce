@@ -3,7 +3,7 @@ import React from "react";
 const CartItem = ({item, index}) => {
   console.log(item);
   return (
-      <div className="gap-10 p-2">
+      <div className="gap-10 p-2" key={index}>
         <div className="card card-compact w-90 bg-base-100 shadow-xl">
           <figure>
             <img
